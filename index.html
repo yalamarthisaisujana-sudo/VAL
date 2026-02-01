@@ -22,16 +22,22 @@
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       max-width: 420px;
+      animation: fadeIn 1.5s ease;
     }
 
-    h1 { color: #e91e63; }
+    h1 {
+      color: #e91e63;
+    }
 
-    p { color: #555; }
+    p {
+      color: #555;
+      font-size: 16px;
+    }
 
     input {
       padding: 10px;
       width: 80%;
-      margin-top: 10px;
+      margin-top: 15px;
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 16px;
@@ -49,9 +55,13 @@
       cursor: pointer;
     }
 
-    audio {
-      margin-top: 15px;
-      width: 100%;
+    button:hover {
+      background: #d81b60;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -60,12 +70,10 @@
 
   <div class="card">
     <h1>Happy Valentine’s Month ❤️</h1>
-    <p>This page hides something special 💕</p>
-
-    <!-- MUSIC -->
-    <audio controls loop preload="auto">
-      <source src="music.mp3" type="audio/mpeg">
-    </audio>
+    <p>
+      This page hides something special 💕<br>
+      Only you can open it 🌸
+    </p>
 
     <input type="password" id="pwd" placeholder="A word only you know…">
     <br>
@@ -84,4 +92,3 @@
 
 </body>
 </html>
-

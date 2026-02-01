@@ -22,18 +22,11 @@
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       max-width: 420px;
-      animation: fadeIn 1.5s ease;
     }
 
-    h1 {
-      color: #e91e63;
-    }
+    h1 { color: #e91e63; }
 
-    p {
-      color: #555;
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
+    p { color: #555; }
 
     input {
       padding: 10px;
@@ -56,19 +49,9 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #d81b60;
-    }
-
-    /* 🎵 Style audio player (NOT hidden) */
     audio {
       margin-top: 15px;
       width: 100%;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to   { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -77,15 +60,11 @@
 
   <div class="card">
     <h1>Happy Valentine’s Day ❤️</h1>
-    <p>
-      This page hides something special 💕<br>
-      Only you can open it 🌸
-    </p>
+    <p>This page hides something special 💕</p>
 
-    <!-- 🎶 MUSIC PLAYER (USER MUST PRESS PLAY) -->
+    <!-- MUSIC -->
     <audio controls loop preload="auto">
       <source src="music.mp3" type="audio/mpeg">
-      Your browser does not support audio.
     </audio>
 
     <input type="password" id="pwd" placeholder="A word only you know…">
@@ -95,8 +74,7 @@
 
   <script>
     function checkPassword() {
-      const password = document.getElementById("pwd").value;
-      if (password === "SujjiBunty") {
+      if (document.getElementById("pwd").value === "SujjiBunty") {
         window.location.href = "secret.html";
       } else {
         alert("Hmm… try again 💭");
